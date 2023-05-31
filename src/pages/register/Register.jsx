@@ -1,7 +1,7 @@
 import { Divider } from "antd";
 import React from "react";
-
 import { Button, Form, Input } from "antd";
+import "./Register.scss";
 
 const Register = () => {
   const onFinish = (values) => {
@@ -10,16 +10,15 @@ const Register = () => {
   return (
     <>
       {" "}
-      <div>
-        <h3 style={{ textAlign: "center" }}>Rorm Register</h3>
+      <div className="register">
+        <h3>Form Register</h3>
         <Divider />
         <div className="form">
           <Form
             name="basic"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 16 }}
-            style={{ maxWidth: 600, margin: "0 auto" }}
-            initialValues={{ remember: true }}
+            labelCol={{ span: 24 }}
+            // wrapperCol={{ span: 16 }}
+            // s
             onFinish={onFinish}
             autoComplete="off"
           >
@@ -59,7 +58,7 @@ const Register = () => {
               <Input />
             </Form.Item>
 
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+            <Form.Item>
               <Button type="primary" htmlType="submit">
                 Submit
               </Button>
